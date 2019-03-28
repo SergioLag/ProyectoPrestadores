@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block titulo %}Eliminar un Prestador{% endblock %}
+
+{% block contenido %}
+
+¿Realmente desea borrar el registro "{{prestador.nombre}}" <td><a href="mailto:{{prestador.email}}">{{prestador.email}}</a></td> ?
+<form method="post">
+    <br>
+    <button type="submit" class="btn btn-danger" value="Submit">Eliminar</button>
+</form>
+{% endblock %}

@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+
+{% block titulo %}Prestadores de Servicio{% endblock %}
+
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Email</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Experiencia</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prestador in prestadores_servicio %}
+        <tr>
+            <td>{{prestador.nombre}}</td>
+            <td>{{prestador.telefono}}</td>
+            <td><a href="mailto:{{prestador.email}}">{{prestador.email}}</a></td>
+            <td>{{prestador.direccion}}</td>
+            <td>{{prestador.edad}}</td>
+            <td>{{prestador.experiencia}}</td>
+            <td>{{prestador.especialidad}}</td>
+            
+            <td>
+                <a class="btn btn-outline-secondary btn-sm" href="./update/{{prestador.id}}"><i class="fa fa-pencil"></i></a>
+                <a class="btn btn-outline-secondary btn-sm" href="./delete/{{prestador.id}}"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a class="btn btn-secondary" href="./create"><i class="fa fa-plus"></i> Añadir</a>
+
+
+{% endblock %}
