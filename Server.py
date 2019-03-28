@@ -95,22 +95,3 @@ def uploader():
 if __name__ == '__main__':
  # Iniciamos la aplicación
  app.run(debug=True)
-
-
-
-# prestadores_servicio=[{"nombre":"Einstein","telefono":"06.00.00.00.00","email":"albert@emc2.com", "direccion":"avenidas","edad":"20","experiencia":"2","especialidad":"fontanero"},
-# {"nombre":"Shannon","telefono":"06.00.00.00.00","email":"claude@fesup2fmax.com", "direccion":"avenidas","edad":"20","experiencia":"2","especialidad":"fontanero"},
-# {"nombre":"Fourier","telefono":"09.00.03.00.01","email":"joseph@maserie.fr", "direccion":"avenidas","edad":"20","experiencia":"2","especialidad":"fontanero"}]
-
-# @app.route('/')
-# def index():
-# return render_template("index.html",prestadores_servicio=prestadores_servicio)
-
-# @app.route('/create', methods=['GET', 'POST'])
-# def create():
-
-# if request.method == "GET":
-# return render_template("create.html",prestador=None)
-
-# if request.method == "POST":
-# prestadores_servicio.append(request.form.to_dict())
